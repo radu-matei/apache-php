@@ -18,7 +18,7 @@
 <body>
 	<img id="logo" src="logo.png" />
 	<h1>Docker!!!</h1>
-	<h1><?php echo "Hello ".(isset($_ENV["NAME"])?$_ENV["NAME"]:"world")."!"; ?></h1>
+	<h1><?php echo "Hello ".($_ENV["NAME"]?$_ENV["NAME"]:"world")."!"; ?></h1>
 	<h2>I am Bob. I usually break the build :)</h2>
 	<h2>Yeaaah! I broke it again :D</h2>
 	<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
